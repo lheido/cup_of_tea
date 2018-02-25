@@ -157,6 +157,7 @@ class DefaultCupOfTeaCommand extends CupOfTeaCommandBase implements ContainerFac
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $config = $this->configFactory->getEditable('cup_of_tea.settings');
     $config->set('menus', $form_state->getValue('menus') ?? []);
+    $config->save();
   }
 
   /**
