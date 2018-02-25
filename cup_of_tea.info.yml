@@ -1,0 +1,5 @@
+name: 'Cup of Tea'
+type: module
+description: 'This module helps you to navigate through the Drupal admin faster, alternative to the great Coffee module'
+core: 8.x
+package: 'Custom'

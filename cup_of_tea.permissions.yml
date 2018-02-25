@@ -1,0 +1,7 @@
+
+access cup of tea:
+  title: 'Access to the cup of tea'
+  description: 'Allow access to the cup of tea widget.'
+administer cup of tea:
+  title: 'Administer the cup of tea settings'
+  description: 'Allow access to the cup of tea settings page.'

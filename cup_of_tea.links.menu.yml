@@ -1,0 +1,7 @@
+cup_of_tea.settings:
+  title: 'Cup of tea settings'
+  route_name: cup_of_tea.settings
+  description: 'Cup of tea configuration page.'
+  parent: system.admin_config_system
+  weight: 99
+

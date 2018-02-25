@@ -1,0 +1,104 @@
+/**
+ * From Adminimal theme.
+ */
+.ui-dialog.cup-of-tea-dialog .ui-dialog-titlebar {
+    border-radius: 0;
+    background: #333;
+    color: rgb(200, 200, 200);
+    padding: 16px 32px 16px 16px;
+    position: relative;
+}
+
+.ui-dialog.cup-of-tea-dialog .ui-widget-content.ui-dialog-buttonpane {
+    border-radius: 0;
+}
+
+.ui-dialog.cup-of-tea-dialog .ui-dialog-titlebar,
+.ui-dialog.cup-of-tea-dialog {
+    outline: none;
+}
+
+.ui-dialog.cup-of-tea-dialog {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cup-of-tea-dialog .ui-button-icon-only.ui-dialog-titlebar-close.ui-state-active,
+.cup-of-tea-dialog .ui-button-icon-only.ui-dialog-titlebar-close.ui-widget-content .ui-state-active {
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+.ui-dialog.cup-of-tea-dialog .ui-dialog-titlebar-close {
+    opacity: 1;
+    right: 16px;
+    border-radius: 0;
+    padding: 16px;
+    margin: -16px 0 0 0;
+    position: absolute;
+    top: 50%;
+}
+
+.ui-dialog.cup-of-tea-dialog .ui-icon.ui-icon-closethick {
+    margin-top: -8px;
+}
+
+.ui-dialog.cup-of-tea-dialog .ui-dialog-titlebar-close.ui-button:focus .ui-icon {
+    /*background: inherit;*/
+}
+
+.ui-dialog.cup-of-tea-dialog .ui-dialog-titlebar-close:hover {
+    opacity: 1;
+}
+
+.cup-of-tea-dialog + .ui-widget-overlay {
+    background: rgb(0, 0, 0);
+    opacity: 0.6;
+}
+
+.cup-of-tea-dialog.ui-widget.ui-widget-content {
+    border: none;
+}
+
+.cup-of-tea-dialog .ui-autocomplete.ui-widget-content {
+    border: none;
+    max-height: 170px;
+    height: 170px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.cup-of-tea-dialog .ui-menu-item-wrapper {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cup-of-tea-dialog .ui-menu-item-wrapper *:first-of-type {
+    flex: 1;
+}
+
+.cup-of-tea-dialog .ui-menu-item-wrapper .item-link {
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cup-of-tea-dialog .ui-menu-item-wrapper.ui-state-active {
+    background: #333;
+    color: #fefefe;
+}
+
+.cup-of-tea-dialog .cup-of-tea-wrapper.ui-dialog-content {
+    padding: 16px;
+}
+
+.cup-of-tea-dialog .form-item {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.cup-of-tea-dialog .form-item input {
+    padding: 8px;
+}

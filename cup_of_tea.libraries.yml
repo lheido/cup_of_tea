@@ -1,0 +1,21 @@
+cup_of_tea:
+  version: VERSION
+  css:
+    component:
+      css/cup_of_tea.css: {}
+  js:
+    js/cup_of_tea.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+    - core/jquery.ui
+    - core/jquery.ui.autocomplete
+    - core/drupal.dialog
+    - cup_of_tea/mousetrap
+
+mousetrap:
+  version: VERSION
+  js:
+    /libraries/mousetrap-1.6.1/mousetrap.min.js: {}

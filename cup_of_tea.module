@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains cup_of_tea.module.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_help().
+ */
+function cup_of_tea_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cup_of_tea module.
+    case 'help.page.cup_of_tea':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module helps you to navigate through the Drupal admin faster, alternative to the great Coffee module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_page_bottom().
+ */
+function cup_of_tea_page_bottom(array &$page_bottom) {
+  if (\Drupal::currentUser()->hasPermission('access cup of tea')) {
+    $config = \Drupal::config('cup_of_tea.settings');
+    $cup_of_tea_id = Html::getUniqueId('cup_of_tea');
+    $element = [
+      '#type' => 'container',
+      '#attributes' => [
+        'id' => $cup_of_tea_id,
+        'class' => ['cup-of-tea-wrapper', 'hidden'],
+      ],
+      'cup_of_tea' => \Drupal::formBuilder()
+        ->getForm('\Drupal\cup_of_tea\Form\CupOfTeaForm'),
+      '#attached' => [
+        'library' => [
+          'cup_of_tea/cup_of_tea',
+        ],
+        'drupalSettings' => [
+          'cup_of_tea' => [
+            'component' => $cup_of_tea_id,
+            'data_route' => Url::fromRoute('cup_of_tea.json_data')->toString(),
+            'shortcut' => $config->get('shortcut'),
+          ],
+        ],
+      ],
+    ];
+    $page_bottom['cup_of_tea'] = $element;
+  }
+}

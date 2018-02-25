@@ -1,0 +1,30 @@
+{
+  "name": "drupal/cup_of_tea",
+  "type": "drupal-module",
+  "description": "This module helps you to navigate through the Drupal admin faster, alternative to the great Coffee module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/cup_of_tea",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/cup_of_tea",
+    "source": "http://cgit.drupalcode.org/cup_of_tea"
+  },
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "ccampbell/mousetrap",
+        "version": "v1.6.1",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/ccampbell/mousetrap/archive/1.6.1.zip",
+          "type": "zip"
+        }
+      }
+    }
+  ],
+  "require": {
+    "ccampbell/mousetrap": "1.6.1"
+  }
+}

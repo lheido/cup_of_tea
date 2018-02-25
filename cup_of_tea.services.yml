@@ -1,0 +1,4 @@
+services:
+  plugin.manager.cup_of_tea_command:
+    class: Drupal\cup_of_tea\Plugin\CupOfTeaCommandManager
+    parent: default_plugin_manager

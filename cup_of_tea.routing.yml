@@ -1,0 +1,18 @@
+
+cup_of_tea.json_data:
+  path: '/cup-of-tea/data'
+  defaults:
+    _controller: '\Drupal\cup_of_tea\Controller\CupOfTeaController::jsonData'
+    _title: 'Cup of tea data'
+  requirements:
+    _permission: 'access cup of tea'
+
+cup_of_tea.settings:
+  path: '/admin/config/cup-of-tea/settings'
+  defaults:
+    _form: '\Drupal\cup_of_tea\Form\CupOfTeaSettingsForm'
+    _title: 'CupOfTeaSettingsForm'
+  requirements:
+    _permission: 'administer cup of tea'
+  options:
+    _admin_route: TRUE
