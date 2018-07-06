@@ -10,10 +10,10 @@ An alternative to the Coffee module (Drupal) for training purpose.
     "type": "package",
     "package": {
         "name": "lheido/cup_of_tea",
-        "version": "1.0.2",
+        "version": "1.0.3",
         "type": "drupal-module",
         "dist": {
-            "url": "https://github.com/lheido/cup_of_tea/archive/1.0.2.zip",
+            "url": "https://github.com/lheido/cup_of_tea/archive/1.0.3.zip",
             "type": "zip"
         }
     }
