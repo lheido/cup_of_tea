@@ -11,7 +11,7 @@ cup_of_tea.settings:
   path: '/admin/config/cup-of-tea/settings'
   defaults:
     _form: '\Drupal\cup_of_tea\Form\CupOfTeaSettingsForm'
-    _title: 'CupOfTeaSettingsForm'
+    _title: 'Cup of tea settings'
   requirements:
     _permission: 'administer cup of tea'
   options:

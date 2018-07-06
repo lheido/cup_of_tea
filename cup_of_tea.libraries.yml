@@ -18,4 +18,4 @@ cup_of_tea:
 mousetrap:
   version: VERSION
   js:
-    /libraries/mousetrap-1.6.1/mousetrap.min.js: {}
+    /libraries/mousetrap/mousetrap.min.js: {}

@@ -3,18 +3,10 @@
 namespace Drupal\cup_of_tea\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\Core\Menu\MenuTreeParameters;
 use Drupal\cup_of_tea\Plugin\CupOfTeaCommandManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Access\AccessManagerInterface;
-use Drupal\Core\Config\ConfigFactoryInterface;
-use Drupal\Core\Menu\MenuLinkTreeInterface;
-use Drupal\Core\Menu\LocalTaskManagerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Serializer\Encoder\JsonEncode;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
-use Symfony\Component\Serializer\SerializerInterface;
 
 /**
  * Class CupOfTeaController.
@@ -36,26 +28,16 @@ class CupOfTeaController extends ControllerBase {
   protected $accessManager;
 
   /**
-   * The \Symfony\Component\Serializer\SerializerInterface service.
-   *
-   * @var \Symfony\Component\Serializer\SerializerInterface
-   */
-  protected $serializer;
-
-  /**
    * Constructs a new CupOfTeaController object.
    *
    * @param \Drupal\cup_of_tea\Plugin\CupOfTeaCommandManager $cup_of_tea_command_manager
    *   The cup of tea plugin manager service.
    * @param \Drupal\Core\Access\AccessManagerInterface $access_manager
    *   The access manager service.
-   * @param \Symfony\Component\Serializer\SerializerInterface $serializer
-   *   The serializer service.
    */
-  public function __construct(CupOfTeaCommandManager $cup_of_tea_command_manager, AccessManagerInterface $access_manager, SerializerInterface $serializer) {
+  public function __construct(CupOfTeaCommandManager $cup_of_tea_command_manager, AccessManagerInterface $access_manager) {
     $this->cupOfTeaCommandManager = $cup_of_tea_command_manager;
     $this->accessManager = $access_manager;
-    $this->serializer = $serializer;
   }
 
   /**
@@ -64,8 +46,7 @@ class CupOfTeaController extends ControllerBase {
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('plugin.manager.cup_of_tea_command'),
-      $container->get('access_manager'),
-      $container->get('serializer')
+      $container->get('access_manager')
     );
   }
 
